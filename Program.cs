@@ -11,19 +11,19 @@ namespace Light
             Console.WriteLine("Now two players have 100 pointes");
             while (computerPlayer > 0 && personPlayer >0)
             {
-                Random x = new Random();
+                Random x = new Random(); // выбор игрока чей ход будет следующим
                 int n = x.Next(2);
                 //Console.WriteLine(n);
                 if (n == 0)
                 {
                     Console.WriteLine("First player's step");
-                    Random y = new Random();
+                    Random y = new Random();  //выбор хода
                     int i = y.Next(3);
                     switch (i)
                     {
                         case 0:
                             Console.WriteLine("First step: low damage from 18 to 25");
-                            Random z = new Random();
+                            Random z = new Random(); // генерация диапазона урона 
                             int j = z.Next(18, 26);
                             computerPlayer = computerPlayer - j;
                             Console.WriteLine("Now first player has: ");
